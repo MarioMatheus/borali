@@ -1,0 +1,33 @@
+page-home {
+
+    .nav-title {
+        font-family: sans-serif, serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .profile-icon{
+        width: 100% !important;  
+        height : 100% !important;  
+        max-width: 35px !important;
+        max-height: 35px !important;
+        border-radius: 10px;
+        margin-right: 5px;
+    }
+
+    .tour-cards{
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tour-image{
+        width: 100% !important;  
+        height : 100% !important;  
+        //max-width: 35px !important;
+        //max-height: 35px !important;
+        border-radius: 5px;
+    }
+
+}

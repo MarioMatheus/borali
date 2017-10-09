@@ -1,0 +1,1 @@
+Esqueleto de aplicação boralí

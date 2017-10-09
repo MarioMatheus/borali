@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-title>
+      <ion-label class="nav-title"> boralí </ion-label>
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentProfileOptions()">
+        <ion-avatar item-end>
+            <img class="profile-icon" src="../../assets/img/avatar-ts-woody.png">
+        </ion-avatar>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-searchbar></ion-searchbar>
+
+  <ion-card class="tour-cards">
+
+    <img class="tour-image" src="../../assets/img/estatua-iracema.jpg">
+
+    <ion-card-content>
+      <ion-card-title> Estátua de Iracema </ion-card-title>
+      <p> Localizada em algum canto é muito legal para se ver eu acho, ou não. </p>
+      <ion-item>
+        Categoria
+        <ion-badge item-end> Ponto </ion-badge>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card class="tour-cards">
+      
+      <img class="tour-image" src="../../assets/img/beach-park.jpg">
+  
+      <ion-card-content>
+        <ion-card-title> Beach Park </ion-card-title>
+        <p> Beach Park é um complexo turístico do litoral do Nordeste do Brasil, na praia... </p>
+        <ion-item>
+          Categoria
+          <ion-badge item-end> Parque </ion-badge>
+        </ion-item>
+      </ion-card-content>
+  
+    </ion-card>
+
+    <ion-fab right bottom>
+      <button ion-fab>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-fab>
+
+</ion-content>
