@@ -5,12 +5,14 @@ import { NavController, ActionSheetController } from 'ionic-angular';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
   constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
  
   }
 
+  // Apresenta as opções da aplicacao
   presentProfileOptions() {
     let actionSheet = this.actionSheetCtrl.create({
       buttons: [
@@ -34,4 +36,5 @@ export class HomePage {
     });
     actionSheet.present();
   }
+
 }
