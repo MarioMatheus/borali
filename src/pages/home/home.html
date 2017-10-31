@@ -20,47 +20,24 @@
 
 <ion-content padding>
 
-  <!-- ferramenta de busca para o feed principal -->
+  <!-- Ferramenta de busca para o feed principal -->
   <ion-searchbar></ion-searchbar>
 
-  <ion-card class="tour-cards">
+  <!-- Percorrendo o Feed -->
+  <ion-card class="tour-cards" *ngFor="let point of this._feed">
 
-    <img class="tour-image" src="./assets/img/estatua-iracema.jpg">
+    <img class="tour-image" src={{point.image()}}>
 
     <ion-card-content>
-      <ion-card-title> Estátua de Iracema </ion-card-title>
-      <p> Localizada em algum canto é muito legal para se ver eu acho, ou não. </p>
 
-      <ion-item>
-        Categoria
-        <ion-badge item-end> Ponto </ion-badge>
-      </ion-item>
-
-      <ion-row justify-content-center>
-        <img class="uva-marks" src="./assets/img/uva-marked.png">
-        <img class="uva-marks" src="./assets/img/uva-marked.png">
-        <img class="uva-marks" src="./assets/img/uva-marked.png">
-        <img class="uva-marks" src="./assets/img/uva-no-marked.png">
-        <img class="uva-marks" src="./assets/img/uva-no-marked.png">
-      </ion-row>
-
-    </ion-card-content>
-
-  </ion-card>
-
-  <ion-card class="tour-cards">
-      
-      <img class="tour-image" src="./assets/img/beach-park.jpg">
+        <ion-card-title> {{point.namePoint()}} </ion-card-title>
+        <p> {{point.description()}} </p>
   
-      <ion-card-content>
-        <ion-card-title> Beach Park </ion-card-title>
-        <p> Beach Park é um complexo turístico do litoral do Nordeste do Brasil, na praia... </p>
-        
         <ion-item>
           Categoria
-          <ion-badge item-end> Parque </ion-badge>
+          <ion-badge item-end> Ponto </ion-badge>
         </ion-item>
-
+  
         <ion-row justify-content-center>
           <img class="uva-marks" src="./assets/img/uva-marked.png">
           <img class="uva-marks" src="./assets/img/uva-marked.png">
@@ -68,15 +45,13 @@
           <img class="uva-marks" src="./assets/img/uva-no-marked.png">
           <img class="uva-marks" src="./assets/img/uva-no-marked.png">
         </ion-row>
-        
-      </ion-card-content>
   
-    </ion-card>
+      </ion-card-content>
+
+  </ion-card>
 
     <ion-fab right bottom>
-      <button ion-fab>
-        <ion-icon name="add"></ion-icon>
-      </button>
+      <button ion-fab> <ion-icon name="add"></ion-icon> </button>
     </ion-fab>
 
 </ion-content>
