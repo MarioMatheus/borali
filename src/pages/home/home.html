@@ -26,9 +26,9 @@
   <!-- Percorrendo o Feed -->
   <ion-card class="tour-cards" *ngFor="let point of this._feed">
 
-    <img class="tour-image" src={{point.image()}}>
+    <img class="tour-image" src={{point.image()}}  >
 
-    <ion-card-content>
+    <ion-card-content (click)="presentPointPage(point)" >
 
         <ion-card-title> {{point.namePoint()}} </ion-card-title>
         <p> {{point.description()}} </p>

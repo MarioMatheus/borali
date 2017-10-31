@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ActionSheetController } from 'ionic-angular';
 
 import { Point } from '../../models/point';
+import { PointPage } from '../point/point';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage {
     this.searchPoints();
   }
 
-  private searchPoints(){
+  private searchPoints() {
     //search in database
     var point = new Point("./assets/img/estatua-iracema.jpg", 'Estátua de Iracema');
     point.setDescription('Localizada em algum canto é muito legal para se ver eu acho, ou não.');
@@ -25,6 +26,11 @@ export class HomePage {
     var point2 = new Point("./assets/img/beach-park.jpg", 'Beach Park');
     point2.setDescription('Beach Park é um complexo turístico do litoral do Nordeste do Brasil, na praia...');
     this.addToFeed(point2);
+  }
+
+  public presentPointPage(point: Point) {
+    console.log(point);
+    this.navCtrl.push(PointPage, {point});
   }
 
   public addToFeed(point: Point) {

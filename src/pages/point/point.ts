@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+
+import { Point } from '../../models/point';
 
 @Component({
   selector: 'page-point',
@@ -8,8 +10,11 @@ import { NavController, ActionSheetController } from 'ionic-angular';
 
 export class PointPage {
 
-    constructor(public navCtrl: NavController) {
+  private _point: Point;
 
+    constructor(public navParams: NavParams) {
+      this._point = this.navParams.get('point');
+      console.log(this._point);
     }
 
 }

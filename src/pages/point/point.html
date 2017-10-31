@@ -1,15 +1,19 @@
 <ion-header>
 
-    <img class="tour-image" src="./assets/img/estatua-iracema.jpg">
+    <button ion-button clear class="arrow-back">
+    <ion-icon  name="arrow-round-back"></ion-icon>
+    </button>
+    <img class="tour-image" src={{_point.image()}}>
+    <!-- <ion-navbar></ion-navbar> -->
 
 </ion-header>
 
     
 <ion-content padding >
     
-    <h4 class="foo"> Estátua de Iracema </h4>
+    <h4> {{_point.namePoint()}} </h4>
 
-    <p> Localizada em algum canto é muito legal para se ver eu acho, ou não. </p>
+    <p> {{_point.description()}} </p>
     
     <ion-item>
         Categoria
