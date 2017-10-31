@@ -15,5 +15,4 @@ Rede Social de Pontos Turísticos do Mundo
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+O projeto é licenciado pela MIT License - veja a [LICENSE.md](LICENSE) para mais detalhes
