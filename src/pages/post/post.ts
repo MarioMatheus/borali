@@ -13,7 +13,9 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 })
 
 export class PostPage {
-  
+
+  private image: any;
+
   constructor(public camera: Camera, public navCtrl: NavController) {
       initializeApp(FIREBASE_CONFIG);
   }
@@ -37,6 +39,7 @@ export class PostPage {
       const pictures = storage().ref('pictures/myPhoto');
       pictures.putString(image, 'data_url');
 
+      this.image = pictures.getDownloadURL(); 
     }
     catch (error) {
       console.log(error)
