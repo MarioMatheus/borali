@@ -12,9 +12,13 @@ export class PointPage {
 
   private _point: Point;
 
-    constructor(public navParams: NavParams) {
+    constructor(public navParams: NavParams, public navCtrl: NavController) {
       this._point = this.navParams.get('point');
-      console.log(this._point);
+      this.navCtrl = this.navParams.get('ctrl');
+    }
+
+    public backPage() {
+      this.navCtrl.pop();
     }
 
 }

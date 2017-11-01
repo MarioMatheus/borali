@@ -30,7 +30,7 @@ export class HomePage {
 
   public presentPointPage(point: Point) {
     console.log(point);
-    this.navCtrl.push(PointPage, {point});
+    this.navCtrl.push(PointPage, { point, ctrl: this.navCtrl });
   }
 
   public addToFeed(point: Point) {

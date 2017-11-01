@@ -1,7 +1,7 @@
 <ion-header>
 
-    <button ion-button clear class="arrow-back">
-    <ion-icon  name="arrow-round-back"></ion-icon>
+    <button ion-button clear class="arrow-back" (click)="backPage()" >
+        <ion-icon  name="arrow-round-back"></ion-icon>
     </button>
     <img class="tour-image" src={{_point.image()}}>
     <!-- <ion-navbar></ion-navbar> -->
