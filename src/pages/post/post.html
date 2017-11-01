@@ -6,7 +6,11 @@
     
         
 <ion-content padding >
-    <img *ngIf="isValid" src={{image}}>
+    <img *ngIf="isValid" src={{this.image}}>
+
+    <p> ue </p>
+    <p>{{this.image}}</p>
+
     <button ion-button (click)="takePhoto()">
         TAKE A PHOTO
     </button>

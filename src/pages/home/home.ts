@@ -3,6 +3,7 @@ import { NavController, ActionSheetController } from 'ionic-angular';
 
 import { Point } from '../../models/point';
 import { PointPage } from '../point/point';
+import { PostPage } from '../post/post';
 
 @Component({
   selector: 'page-home',
@@ -35,6 +36,10 @@ export class HomePage {
 
   public addToFeed(point: Point) {
     this._feed.push(point);
+  }
+
+  public postPoint() {
+    this.navCtrl.push(PostPage);
   }
 
   // Apresenta as opções da aplicacao

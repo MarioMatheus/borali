@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 //To use of camera and storage in firebase
 import { storage, initializeApp } from 'firebase';
-import { FIREBASE_CONFIG } from '../../app/firebase.config';
+//import { FIREBASE_CONFIG } from '../../app/firebase.config';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
@@ -17,7 +17,7 @@ export class PostPage {
   private image: any;
 
   constructor(public camera: Camera, public navCtrl: NavController) {
-      initializeApp(FIREBASE_CONFIG);
+      //initializeApp(FIREBASE_CONFIG);
   }
 
   async takePhoto() {
