@@ -1,18 +1,39 @@
 <ion-header>
     
-    <ion-navbar></ion-navbar>
+    <ion-navbar color="secondary">
+        <ion-title> Novo ponto </ion-title>
+    </ion-navbar>
     
 </ion-header>
     
         
-<ion-content padding >
-    <img *ngIf="isValid" src={{this.image}}>
+<ion-content>
 
-    <p> ue </p>
-    <p>{{this.image}}</p>
+    <ion-card class="tour-cards">
 
-    <button ion-button (click)="takePhoto()">
-        TAKE A PHOTO
+        <img *ngIf="_image" src="{{_image}}">
+
+        <ion-card-content>
+
+            <ion-item>
+                <ion-input type="text" placeholder="Ponto" [(ngModel)]="_titlePoint" ></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-input type="text" placeholder="Descrição" [(ngModel)]="_description" ></ion-input>
+            </ion-item>
+
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab right bottom>
+        <button ion-fab color="secondary" (click)="takePhoto()" >
+            <ion-icon name="camera"></ion-icon>
+        </button>
+    </ion-fab>
+
+    <button ion-button block color="secondary" >
+        Salvar Ponto
     </button>
         
 </ion-content>
