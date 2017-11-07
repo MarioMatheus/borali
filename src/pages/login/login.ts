@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { User } from '../../models/user';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'page-login',
@@ -10,24 +12,29 @@ import { HomePage } from '../home/home';
 
 export class LoginPage {
 
-  private username: String;
-  private password: String;
+  private user : User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public afAuth: AngularFireAuth, 
+    public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
-  private validate(): boolean {
-    if(this.username==="mario@matheus" && this.password==="admin"){
-      return true;
+  async login(user : User) {
+    
+    try{
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.getEmail(), user.getPassword());
+      if(result){
+        this.navCtrl.setRoot('HomePage')
+      }
     }
-    return false;
+    catch(e){
+      console.log(e)
+    }
+    
   }
-
-  goToFeed() {
-    if(this.validate()){
-      this.navCtrl.setRoot(HomePage);
-    }
+  
+  register() {
+    this.navCtrl.push('RegisterPage');
   }
 
 }

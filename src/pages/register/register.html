@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Cadastre-se</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label floating>Email Adress</ion-label>
+    <ion-input type="text" [(ngModel)]="user._email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="text" [(ngModel)]="user._password"></ion-input>
+  </ion-item>
+
+  <button ion-button clear (click)="register(user)"> Finalizar </button>
+
+
+</ion-content>

@@ -7,6 +7,8 @@ import { initializeApp } from 'firebase';
 import { FIREBASE_CONFIG } from './firebase.config';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 //import { PointPage } from '../pages/point/point';
 //import { LoginPage } from '../pages/login/login'
 //import { PostPage } from '../pages/post/post';
@@ -16,7 +18,7 @@ import { HomePage } from '../pages/home/home';
 })
 
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     initializeApp(FIREBASE_CONFIG);
