@@ -16,24 +16,30 @@
         <ion-card-content>
 
             <ion-item>
-                <ion-input type="text" placeholder="Ponto" [(ngModel)]="_titlePoint" ></ion-input>
+                <ion-input type="text" placeholder="Ponto" [(ngModel)]="_titlePoint"></ion-input>
             </ion-item>
             
             <ion-item>
-                <ion-input type="text" placeholder="Descrição" [(ngModel)]="_description" ></ion-input>
+                <ion-input type="text" placeholder="Descrição" [(ngModel)]="_description"></ion-input>
             </ion-item>
 
         </ion-card-content>
     </ion-card>
 
-    <ion-fab right bottom>
-        <button ion-fab color="secondary" (click)="takePhoto()" >
-            <ion-icon name="camera"></ion-icon>
-        </button>
-    </ion-fab>
-
-    <button ion-button block color="secondary" >
+    <button ion-button block color="secondary">
         Salvar Ponto
     </button>
+    
+    <ion-fab right bottom>
+        <button ion-fab color="secondary"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button ion-fab color="secondary" (click)="getMediaFromCamera()">
+                <ion-icon name="camera"> </ion-icon>
+            </button>
+            <button ion-fab color="secondary" (click)="getMediaFromGallery()">
+                <ion-icon name="image"> </ion-icon>
+            </button>
+        </ion-fab-list>
+    </ion-fab>
         
 </ion-content>
