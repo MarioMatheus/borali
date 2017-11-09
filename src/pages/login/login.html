@@ -15,18 +15,18 @@
     
     <ion-item>
       <ion-label floating>Email Adress</ion-label>
-      <ion-input type="text" [(ngModel)]="username"></ion-input>
+      <ion-input type="text" [(ngModel)]="user._email"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="user._password"></ion-input>
     </ion-item>
 
   </ion-list>
   
   <ion-list class="account-buttons">
-    <button ion-button block (click)="login(user)"> Login </button>
+    <button ion-button block (click)="login()"> Login </button>
     <button ion-button clear (click)="register()"> Create a account </button>
   </ion-list>
 

@@ -17,12 +17,12 @@ export class RegisterPage {
   
   constructor(private afAuth: AngularFireAuth, 
     public navCtrl: NavController, public navParams: NavParams) {
-
+    this.user = new User();
   }
 
   async register(user: User){
     try{
-      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.getEmail(), user.getPassword());
+      const result = await this.afAuth.auth.createUserWithEmailAndPassword(this.user.getEmail(), this.user.getPassword());
     }
     catch(e){
       console.error(e);
