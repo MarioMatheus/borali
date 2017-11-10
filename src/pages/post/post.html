@@ -10,11 +10,8 @@
 <ion-content>
 
     <ion-card class="tour-cards">
-
         <img *ngIf="_image" src="{{_image}}">
-
         <ion-card-content>
-
             <ion-item>
                 <ion-input type="text" placeholder="Ponto" [(ngModel)]="_titlePoint"></ion-input>
             </ion-item>
@@ -22,7 +19,6 @@
             <ion-item>
                 <ion-input type="text" placeholder="Descrição" [(ngModel)]="_description"></ion-input>
             </ion-item>
-
         </ion-card-content>
     </ion-card>
 
@@ -30,13 +26,16 @@
         Salvar Ponto
     </button>
     
-    <ion-fab right bottom>
-        <button ion-fab color="secondary"><ion-icon name="add"></ion-icon></button>
+    <ion-fab right bottom #fab>
+        <button ion-fab color="secondary">
+            <ion-icon name="add"></ion-icon>
+        </button>
+
         <ion-fab-list side="top">
-            <button ion-fab color="secondary" (click)="getMediaFromCamera()">
+            <button ion-fab color="secondary" (click)="getMediaFromCamera(fab)">
                 <ion-icon name="camera"> </ion-icon>
             </button>
-            <button ion-fab color="secondary" (click)="getMediaFromGallery()">
+            <button ion-fab color="secondary" (click)="getMediaFromGallery(fab)">
                 <ion-icon name="image"> </ion-icon>
             </button>
         </ion-fab-list>
