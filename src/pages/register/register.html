@@ -16,7 +16,12 @@
   
   <ion-item>
     <ion-label floating>Password</ion-label>
-    <ion-input type="password" [(ngModel)]="user._password"></ion-input>
+    <ion-input type="password" [(ngModel)]="firstPassword"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Confirm your password</ion-label>
+    <ion-input type="password" [(ngModel)]="seconPassword"></ion-input>
   </ion-item>
 
   <button ion-button clear (click)="register()"> Finalizar </button>
