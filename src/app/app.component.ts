@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 //import { PointPage } from '../pages/point/point';
 //import { LoginPage } from '../pages/login/login'
 //import { PostPage } from '../pages/post/post';
+//import { ProfilePage } from '../pages/profile/profile';
 
 @Component({
   templateUrl: 'app.html'

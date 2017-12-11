@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { PointPage } from '../pages/point/point';
 import { PostPage } from '../pages/post/post';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostPage } from '../pages/post/post';
     HomePage,
     LoginPage,
     PointPage,
-    PostPage
+    PostPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { PostPage } from '../pages/post/post';
     HomePage,
     LoginPage,
     PointPage,
-    PostPage
+    PostPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

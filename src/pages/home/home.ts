@@ -4,6 +4,7 @@ import { NavController, ActionSheetController } from 'ionic-angular';
 import { Point } from '../../models/point';
 import { PointPage } from '../point/point';
 import { PostPage } from '../post/post';
+import { ProfilePage } from '../profile/profile';
 
 @Component({
   selector: 'page-home',
@@ -50,6 +51,7 @@ export class HomePage {
           text: 'My Perfil',
           handler: () => {
             console.log('My Perfil clicked');
+            this.navCtrl.push(ProfilePage)
           }
         },{
           text: 'Settings',
