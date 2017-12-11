@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { User } from '../../models/user';
+import { TravelItineraryPage } from '../travel-itinerary/travel-itinerary';
 
 @Component({
   selector: 'page-profile',
@@ -9,5 +9,9 @@ import { User } from '../../models/user';
 })
 
 export class ProfilePage {
+    constructor(private navCtrl: NavController) {}
 
+    openItineraries() {
+      this.navCtrl.push(TravelItineraryPage)
+    }
 }
