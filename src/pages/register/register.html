@@ -1,0 +1,29 @@
+<ion-header>
+    
+  <ion-navbar color="primary">
+    <ion-title>Cadastre-se</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label floating>Email Adress</ion-label>
+    <ion-input type="text" [(ngModel)]="user._email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="firstPassword"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Confirm your password</ion-label>
+    <ion-input type="password" [(ngModel)]="seconPassword"></ion-input>
+  </ion-item>
+
+  <button ion-button style="margin-top: 10%;" block (click)="register()"> Finalizar </button>
+
+</ion-content>
