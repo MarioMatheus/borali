@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 import { TravelItineraryPage } from '../travel-itinerary/travel-itinerary';
 
@@ -9,9 +9,22 @@ import { TravelItineraryPage } from '../travel-itinerary/travel-itinerary';
 })
 
 export class ProfilePage {
-    constructor(private navCtrl: NavController) {}
+    constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController) {}
 
     openItineraries() {
-      this.navCtrl.push(TravelItineraryPage)
+      let actionSheet = this.actionSheetCtrl.create({
+        title: 'Meus Roteiros',
+        buttons: [
+          {
+            text: 'Fortaleza-Pacajus',
+            role: 'Fortaleza-Pacajus',
+            handler: () => {
+              this.navCtrl.push(TravelItineraryPage)
+            }
+          }
+        ]
+      });
+      actionSheet.present();
     }
+
 }

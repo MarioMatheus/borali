@@ -4,12 +4,25 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <!--Imagem da rota aqui-->
-    <ion-list no-lines clear>
-        <ion-item> Beach Park </ion-item>
-        <ion-item> Aqua Resort </ion-item>
-        <ion-item> Shopping Iguatemi </ion-item>
-        <ion-item> Pousada Pet </ion-item>
-    </ion-list>
+<ion-content>
+    <img src="./assets/img/itinerary.png">
+
+    <ion-fab right bottom>
+        <button ion-fab color="primary">
+            <ion-icon name="share-alt"></ion-icon>
+        </button>
+    </ion-fab>
+
+    <ion-card color="light">
+        <ion-card-header text-center>
+          <ion-label> Intinerário Fortaleza-Pacajus </ion-label>
+        </ion-card-header>
+        <hr>
+        <ion-card-content>
+            <button ion-button block color="primary" full>1 - Fortaleza - 20/12/2017</button>
+            <button ion-button block color="primary" full>2 - Maranguape - 22/12/2017</button>
+            <button ion-button block color="primary" full>3 - Itaitinga - 24/12/2017</button>
+            <button ion-button block color="light" full>4 - Pacajus - 26/12/2017</button>
+        </ion-card-content>
+      </ion-card>
 </ion-content>

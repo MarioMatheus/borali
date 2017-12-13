@@ -5,6 +5,7 @@ import { Point } from '../../models/point';
 import { PointPage } from '../point/point';
 import { PostPage } from '../post/post';
 import { ProfilePage } from '../profile/profile';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -54,14 +55,9 @@ export class HomePage {
             this.navCtrl.push(ProfilePage)
           }
         },{
-          text: 'Settings',
-          handler: () => {
-            console.log('Settings clicked');
-          }
-        },{
           text: 'Log Out',
           handler: () => {
-            console.log('Log Out clicked');
+            this.navCtrl.setRoot(LoginPage)
           }
         }
       ]
