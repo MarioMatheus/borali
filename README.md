@@ -12,6 +12,7 @@ Rede Social de Pontos Turísticos do Mundo
 
 * **Mario Matheus** - [MarioMatheus](https://github.com/MarioMatheus/)
 * **Gabriel Palhares** - [palharesgabriel](https://github.com/palharesgabriel)
+* **Bia Plutarco** - [biaplutarco](https://github.com/biaplutarco)
 
 ## License
 
