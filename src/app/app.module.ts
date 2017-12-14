@@ -17,6 +17,7 @@ import { PostPage } from '../pages/post/post';
 import { ProfilePage } from '../pages/profile/profile';
 import { TravelItineraryPage } from '../pages/travel-itinerary/travel-itinerary';
 import { RegisterPage } from '../pages/register/register';
+import { FollowsPage } from '../pages/follows/follows';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterPage } from '../pages/register/register';
     PostPage,
     ProfilePage,
     TravelItineraryPage,
-    RegisterPage
+    RegisterPage,
+    FollowsPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { RegisterPage } from '../pages/register/register';
     PostPage,
     ProfilePage,
     TravelItineraryPage,
-    RegisterPage
+    RegisterPage,
+    FollowsPage
   ],
   providers: [
     StatusBar,

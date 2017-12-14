@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ActionSheetController } from 'ionic-angular';
 
 import { TravelItineraryPage } from '../travel-itinerary/travel-itinerary';
+import { FollowsPage } from '../follows/follows';
 
 @Component({
   selector: 'page-profile',
@@ -25,6 +26,10 @@ export class ProfilePage {
         ]
       });
       actionSheet.present();
+    }
+
+    openFollows() {
+      this.navCtrl.push(FollowsPage);
     }
 
 }
